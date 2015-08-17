@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110133A81B817A3A00EE81A7 /* HGSidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110133A71B817A3A00EE81A7 /* HGSidePanelViewController.swift */; };
+		111800071B81865B00CDA96A /* HGContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111800061B81865B00CDA96A /* HGContentViewController.swift */; };
+		111800091B8186B300CDA96A /* HGBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111800081B8186B300CDA96A /* HGBaseTableViewController.swift */; };
+		1118000B1B8186D700CDA96A /* HGTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1118000A1B8186D700CDA96A /* HGTabBarViewController.swift */; };
+		1118000F1B818F8200CDA96A /* HGMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1118000E1B818F8200CDA96A /* HGMineViewController.swift */; };
+		111800111B81920E00CDA96A /* HGSidePanalBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111800101B81920E00CDA96A /* HGSidePanalBaseViewController.swift */; };
+		11AF35421B81CFAE0000C16F /* HGSideCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF35411B81CFAE0000C16F /* HGSideCellModel.swift */; };
+		11AF35461B81D6F10000C16F /* HGSportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF35451B81D6F10000C16F /* HGSportViewController.swift */; };
 		11B24B371B7AF2580055EB9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B361B7AF2580055EB9A /* AppDelegate.swift */; };
-		11B24B391B7AF2580055EB9A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B381B7AF2580055EB9A /* FirstViewController.swift */; };
-		11B24B3B1B7AF2580055EB9A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B3A1B7AF2580055EB9A /* SecondViewController.swift */; };
 		11B24B3E1B7AF2580055EB9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B24B3C1B7AF2580055EB9A /* Main.storyboard */; };
 		11B24B401B7AF2580055EB9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B24B3F1B7AF2580055EB9A /* Images.xcassets */; };
 		11B24B431B7AF2580055EB9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B24B411B7AF2580055EB9A /* LaunchScreen.xib */; };
 		11B24B4F1B7AF2580055EB9A /* HGRunningTabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B4E1B7AF2580055EB9A /* HGRunningTabTests.swift */; };
+		11B24B701B7AF6D00055EB9A /* HGBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B651B7AF6D00055EB9A /* HGBaseNavigationController.swift */; };
+		11B24B721B7AF6D00055EB9A /* HGBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B6B1B7AF6D00055EB9A /* HGBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +35,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		110133A71B817A3A00EE81A7 /* HGSidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSidePanelViewController.swift; sourceTree = "<group>"; };
+		111800061B81865B00CDA96A /* HGContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGContentViewController.swift; sourceTree = "<group>"; };
+		111800081B8186B300CDA96A /* HGBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGBaseTableViewController.swift; sourceTree = "<group>"; };
+		1118000A1B8186D700CDA96A /* HGTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGTabBarViewController.swift; sourceTree = "<group>"; };
+		1118000E1B818F8200CDA96A /* HGMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGMineViewController.swift; sourceTree = "<group>"; };
+		111800101B81920E00CDA96A /* HGSidePanalBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSidePanalBaseViewController.swift; sourceTree = "<group>"; };
+		11AF35411B81CFAE0000C16F /* HGSideCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSideCellModel.swift; sourceTree = "<group>"; };
+		11AF35451B81D6F10000C16F /* HGSportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSportViewController.swift; sourceTree = "<group>"; };
 		11B24B311B7AF2580055EB9A /* HGRunningTab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HGRunningTab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B24B351B7AF2580055EB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11B24B361B7AF2580055EB9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11B24B381B7AF2580055EB9A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		11B24B3A1B7AF2580055EB9A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		11B24B3D1B7AF2580055EB9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11B24B3F1B7AF2580055EB9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		11B24B421B7AF2580055EB9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		11B24B481B7AF2580055EB9A /* HGRunningTabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HGRunningTabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B24B4D1B7AF2580055EB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11B24B4E1B7AF2580055EB9A /* HGRunningTabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRunningTabTests.swift; sourceTree = "<group>"; };
+		11B24B651B7AF6D00055EB9A /* HGBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGBaseNavigationController.swift; sourceTree = "<group>"; };
+		11B24B6B1B7AF6D00055EB9A /* HGBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +95,10 @@
 		11B24B331B7AF2580055EB9A /* HGRunningTab */ = {
 			isa = PBXGroup;
 			children = (
-				11B24B361B7AF2580055EB9A /* AppDelegate.swift */,
-				11B24B381B7AF2580055EB9A /* FirstViewController.swift */,
-				11B24B3A1B7AF2580055EB9A /* SecondViewController.swift */,
+				11B24B581B7AF6D00055EB9A /* HGFrameWork */,
+				11B24B6C1B7AF6D00055EB9A /* HGSUV */,
 				11B24B3C1B7AF2580055EB9A /* Main.storyboard */,
 				11B24B3F1B7AF2580055EB9A /* Images.xcassets */,
-				11B24B411B7AF2580055EB9A /* LaunchScreen.xib */,
 				11B24B341B7AF2580055EB9A /* Supporting Files */,
 			);
 			path = HGRunningTab;
@@ -93,6 +107,8 @@
 		11B24B341B7AF2580055EB9A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				11B24B361B7AF2580055EB9A /* AppDelegate.swift */,
+				11B24B411B7AF2580055EB9A /* LaunchScreen.xib */,
 				11B24B351B7AF2580055EB9A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -113,6 +129,182 @@
 				11B24B4D1B7AF2580055EB9A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11B24B581B7AF6D00055EB9A /* HGFrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				11B24B591B7AF6D00055EB9A /* Category */,
+				11B24B5A1B7AF6D00055EB9A /* Config */,
+				11B24B5B1B7AF6D00055EB9A /* DataCenter */,
+				11B24B5C1B7AF6D00055EB9A /* DataModel */,
+				11B24B5D1B7AF6D00055EB9A /* DataStorage */,
+				11B24B5E1B7AF6D00055EB9A /* Network */,
+				11B24B5F1B7AF6D00055EB9A /* Plugins */,
+				11B24B611B7AF6D00055EB9A /* Service */,
+				11B24B621B7AF6D00055EB9A /* Tools */,
+				11B24B631B7AF6D00055EB9A /* ViewLayer */,
+			);
+			path = HGFrameWork;
+			sourceTree = "<group>";
+		};
+		11B24B591B7AF6D00055EB9A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		11B24B5A1B7AF6D00055EB9A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		11B24B5B1B7AF6D00055EB9A /* DataCenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataCenter;
+			sourceTree = "<group>";
+		};
+		11B24B5C1B7AF6D00055EB9A /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		11B24B5D1B7AF6D00055EB9A /* DataStorage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataStorage;
+			sourceTree = "<group>";
+		};
+		11B24B5E1B7AF6D00055EB9A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		11B24B5F1B7AF6D00055EB9A /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				11B24B601B7AF6D00055EB9A /* zoc */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		11B24B601B7AF6D00055EB9A /* zoc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = zoc;
+			sourceTree = "<group>";
+		};
+		11B24B611B7AF6D00055EB9A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		11B24B621B7AF6D00055EB9A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		11B24B631B7AF6D00055EB9A /* ViewLayer */ = {
+			isa = PBXGroup;
+			children = (
+				11B24B641B7AF6D00055EB9A /* NavController */,
+				11B24B661B7AF6D00055EB9A /* SlideNavController */,
+				11B24B671B7AF6D00055EB9A /* TabBarController */,
+				11B24B691B7AF6D00055EB9A /* View */,
+				11B24B6A1B7AF6D00055EB9A /* ViewController */,
+			);
+			path = ViewLayer;
+			sourceTree = "<group>";
+		};
+		11B24B641B7AF6D00055EB9A /* NavController */ = {
+			isa = PBXGroup;
+			children = (
+				11B24B651B7AF6D00055EB9A /* HGBaseNavigationController.swift */,
+			);
+			path = NavController;
+			sourceTree = "<group>";
+		};
+		11B24B661B7AF6D00055EB9A /* SlideNavController */ = {
+			isa = PBXGroup;
+			children = (
+				111800061B81865B00CDA96A /* HGContentViewController.swift */,
+				110133A71B817A3A00EE81A7 /* HGSidePanelViewController.swift */,
+				11AF35411B81CFAE0000C16F /* HGSideCellModel.swift */,
+				111800101B81920E00CDA96A /* HGSidePanalBaseViewController.swift */,
+			);
+			path = SlideNavController;
+			sourceTree = "<group>";
+		};
+		11B24B671B7AF6D00055EB9A /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				1118000A1B8186D700CDA96A /* HGTabBarViewController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		11B24B691B7AF6D00055EB9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11B24B6A1B7AF6D00055EB9A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				111800081B8186B300CDA96A /* HGBaseTableViewController.swift */,
+				11B24B6B1B7AF6D00055EB9A /* HGBaseViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		11B24B6C1B7AF6D00055EB9A /* HGSUV */ = {
+			isa = PBXGroup;
+			children = (
+				11B24B6D1B7AF6D00055EB9A /* HGtools */,
+				11B24B6E1B7AF6D00055EB9A /* MineCenter */,
+				11B24B6F1B7AF6D00055EB9A /* Sport */,
+			);
+			path = HGSUV;
+			sourceTree = "<group>";
+		};
+		11B24B6D1B7AF6D00055EB9A /* HGtools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HGtools;
+			sourceTree = "<group>";
+		};
+		11B24B6E1B7AF6D00055EB9A /* MineCenter */ = {
+			isa = PBXGroup;
+			children = (
+				1118000E1B818F8200CDA96A /* HGMineViewController.swift */,
+			);
+			path = MineCenter;
+			sourceTree = "<group>";
+		};
+		11B24B6F1B7AF6D00055EB9A /* Sport */ = {
+			isa = PBXGroup;
+			children = (
+				11AF35451B81D6F10000C16F /* HGSportViewController.swift */,
+			);
+			path = Sport;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +407,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B24B3B1B7AF2580055EB9A /* SecondViewController.swift in Sources */,
+				110133A81B817A3A00EE81A7 /* HGSidePanelViewController.swift in Sources */,
+				11B24B701B7AF6D00055EB9A /* HGBaseNavigationController.swift in Sources */,
+				111800071B81865B00CDA96A /* HGContentViewController.swift in Sources */,
+				111800091B8186B300CDA96A /* HGBaseTableViewController.swift in Sources */,
+				1118000F1B818F8200CDA96A /* HGMineViewController.swift in Sources */,
+				11AF35421B81CFAE0000C16F /* HGSideCellModel.swift in Sources */,
+				11B24B721B7AF6D00055EB9A /* HGBaseViewController.swift in Sources */,
+				11AF35461B81D6F10000C16F /* HGSportViewController.swift in Sources */,
 				11B24B371B7AF2580055EB9A /* AppDelegate.swift in Sources */,
-				11B24B391B7AF2580055EB9A /* FirstViewController.swift in Sources */,
+				111800111B81920E00CDA96A /* HGSidePanalBaseViewController.swift in Sources */,
+				1118000B1B8186D700CDA96A /* HGTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +545,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HGRunningTab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,6 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HGRunningTab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -413,6 +615,7 @@
 				11B24B541B7AF2580055EB9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		11B24B551B7AF2580055EB9A /* Build configuration list for PBXNativeTarget "HGRunningTabTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +624,7 @@
 				11B24B571B7AF2580055EB9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
