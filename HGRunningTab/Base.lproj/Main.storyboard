@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pIM-a8-Feq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pIM-a8-Feq">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Side Panel View Controller-->
@@ -19,14 +20,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_1011" translatesAutoresizingMaskIntoConstraints="NO" id="OEN-ow-T6J">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CIp-as-poU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CIp-as-poU">
                                 <rect key="frame" x="-7" y="0.0" width="382" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="tVw-ZU-J6B">
-                                    <rect key="frame" x="0.0" y="0.0" width="382" height="93"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.95686274510000002" green="0.85965167490000005" blue="0.49919474520000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="lBY-rJ-QaU">
+                                    <rect key="frame" x="0.0" y="159" width="382" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HGSideCell" id="a02-eB-sDH" customClass="HGSideCell" customModule="HGRunningTab" customModuleProvider="target">
@@ -35,6 +41,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a02-eB-sDH" id="8aO-6A-7Oz">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -49,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjr-o3-2IT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-521.5" y="-762.5"/>
+            <point key="canvasLocation" x="-526.5" y="-744.5"/>
         </scene>
         <!--Content View Controller-->
         <scene sceneID="fGR-Ij-dnZ">
@@ -73,7 +80,8 @@
         <!--辉哥-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController storyboardIdentifier="HGTabBarViewController" title="辉哥" id="49e-Tb-3d3" customClass="HGTabBarViewController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HGTabBarViewController" title="辉哥" wantsFullScreenLayout="YES" id="49e-Tb-3d3" customClass="HGTabBarViewController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
@@ -95,9 +103,14 @@
             <objects>
                 <navigationController title="运动" id="4ZY-aA-9p0" customClass="HGBaseNavigationController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="运动" image="first" id="ctU-WY-8ul"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sfb-N5-Dpv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="tXr-iG-kWI" kind="relationship" relationship="rootViewController" id="gHY-AN-Wnv"/>
@@ -110,7 +123,7 @@
         <!--运动-->
         <scene sceneID="UpD-o6-fwB">
             <objects>
-                <viewController title="运动" id="tXr-iG-kWI" customClass="HGSportViewController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="运动" hidesBottomBarWhenPushed="YES" id="tXr-iG-kWI" customClass="HGSportViewController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RBg-8E-zMo"/>
                         <viewControllerLayoutGuide type="bottom" id="6Bk-Ne-k6N"/>
@@ -119,20 +132,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpc-zZ-fqP">
-                                <rect key="frame" x="0.0" y="319" width="94" height="30"/>
-                                <state key="normal" title="动动更健康">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5u-Um-hxc">
+                                <rect key="frame" x="0.0" y="579" width="375" height="88"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.1137254902" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="pel-f8-GVt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" title="开始跑步">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="rsp-fm-Zm7" kind="show" id="6K2-v9-uZ5"/>
-                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxr-Ak-LcA">
+                                <rect key="frame" x="110" y="72" width="156" height="152"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="130"/>
+                                <color key="textColor" red="0.87843137250000003" green="0.1137254902" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总公里" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckb-93-NKj">
+                                <rect key="frame" x="146" y="224" width="84" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16U-iH-V3p">
+                                <rect key="frame" x="0.0" y="266" width="375" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdi-uF-g0u">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nku-f3-HMh">
+                                                <rect key="frame" x="52" y="17" width="20" height="30"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gd-HV-su8">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="120"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wth-Mc-gKB">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="120"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="1gd-HV-su8" firstAttribute="top" secondItem="16U-iH-V3p" secondAttribute="top" id="61V-th-h06"/>
+                                    <constraint firstAttribute="bottom" secondItem="wth-Mc-gKB" secondAttribute="bottom" id="7d6-Gi-l7I"/>
+                                    <constraint firstItem="hdi-uF-g0u" firstAttribute="leading" secondItem="16U-iH-V3p" secondAttribute="leading" id="H0o-lG-fPT"/>
+                                    <constraint firstItem="hdi-uF-g0u" firstAttribute="top" secondItem="16U-iH-V3p" secondAttribute="top" id="I2S-r2-LMp"/>
+                                    <constraint firstAttribute="height" constant="120" id="Pgo-WJ-H9w"/>
+                                    <constraint firstAttribute="trailing" secondItem="wth-Mc-gKB" secondAttribute="trailing" id="PxE-fA-gNM"/>
+                                    <constraint firstAttribute="bottom" secondItem="1gd-HV-su8" secondAttribute="bottom" id="arM-0c-eyJ"/>
+                                    <constraint firstItem="wth-Mc-gKB" firstAttribute="leading" secondItem="1gd-HV-su8" secondAttribute="trailing" id="fEN-8A-iGx"/>
+                                    <constraint firstItem="wth-Mc-gKB" firstAttribute="top" secondItem="16U-iH-V3p" secondAttribute="top" id="fL5-aT-6X9"/>
+                                    <constraint firstItem="1gd-HV-su8" firstAttribute="width" secondItem="hdi-uF-g0u" secondAttribute="width" id="mNZ-6f-yW2"/>
+                                    <constraint firstAttribute="bottom" secondItem="hdi-uF-g0u" secondAttribute="bottom" id="pHu-5z-PbS"/>
+                                    <constraint firstItem="1gd-HV-su8" firstAttribute="leading" secondItem="hdi-uF-g0u" secondAttribute="trailing" id="uFs-FB-pgR"/>
+                                    <constraint firstItem="1gd-HV-su8" firstAttribute="width" secondItem="wth-Mc-gKB" secondAttribute="width" id="yen-eT-6Tc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Lxr-Ak-LcA" secondAttribute="centerX" id="0Sb-kA-5pt"/>
+                            <constraint firstItem="16U-iH-V3p" firstAttribute="top" secondItem="ckb-93-NKj" secondAttribute="bottom" constant="8" id="1x0-5m-vYR"/>
+                            <constraint firstAttribute="centerX" secondItem="ckb-93-NKj" secondAttribute="centerX" id="81X-3s-SLS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a5u-Um-hxc" secondAttribute="trailing" constant="-16" id="CHG-Ot-8Ng"/>
+                            <constraint firstItem="a5u-Um-hxc" firstAttribute="leading" secondItem="bRv-CJ-0hi" secondAttribute="leadingMargin" constant="-16" id="IfX-Y8-GrE"/>
+                            <constraint firstItem="Lxr-Ak-LcA" firstAttribute="top" secondItem="RBg-8E-zMo" secondAttribute="bottom" constant="8" id="KuC-Qd-MdZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="16U-iH-V3p" secondAttribute="trailing" constant="-16" id="SCW-HQ-vnv"/>
+                            <constraint firstItem="ckb-93-NKj" firstAttribute="top" secondItem="Lxr-Ak-LcA" secondAttribute="bottom" id="ZCX-ho-nQd"/>
+                            <constraint firstItem="16U-iH-V3p" firstAttribute="leading" secondItem="bRv-CJ-0hi" secondAttribute="leadingMargin" constant="-16" id="jHg-wb-b6S"/>
+                            <constraint firstItem="6Bk-Ne-k6N" firstAttribute="top" secondItem="a5u-Um-hxc" secondAttribute="bottom" id="qjb-Ib-RvC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="运动" id="6Vz-bz-pYk">
-                        <barButtonItem key="leftBarButtonItem" title="left" id="0EG-Ux-aES">
+                        <barButtonItem key="leftBarButtonItem" title="☗" id="0EG-Ux-aES">
                             <connections>
                                 <action selector="leftSlideBtnClick:" destination="tXr-iG-kWI" id="UeF-we-L50"/>
                             </connections>
@@ -142,24 +219,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9am-pL-7Xa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-208.5" y="1601.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="egH-6u-k03">
-            <objects>
-                <viewController id="rsp-fm-Zm7" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pGh-SG-NzE"/>
-                        <viewControllerLayoutGuide type="bottom" id="RWS-mB-Toc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="T0o-qs-Eed">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vjz-VF-0xB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-208.5" y="2381.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="l4f-fx-B19">
@@ -182,7 +241,7 @@
         <!--我-->
         <scene sceneID="Q7a-Zc-Q50">
             <objects>
-                <viewController title="我" id="kle-RS-G7Q" customClass="HGMineViewController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="我" hidesBottomBarWhenPushed="YES" id="kle-RS-G7Q" customClass="HGMineViewController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BJz-1a-3uR"/>
                         <viewControllerLayoutGuide type="bottom" id="lBO-Ka-7kT"/>
@@ -220,6 +279,7 @@
             <objects>
                 <navigationController title="我" id="fUt-bA-9Ci" customClass="HGBaseNavigationController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我" image="second" id="Qrp-si-57W"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pza-7P-z1Y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

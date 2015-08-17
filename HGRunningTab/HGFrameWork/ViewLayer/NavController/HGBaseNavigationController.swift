@@ -14,6 +14,9 @@ class HGBaseNavigationController: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationBar.barTintColor = UIColor.redColor()
+        navigationBar.tintColor = UIColor.whiteColor()
+
     }
 
     override func didReceiveMemoryWarning() {
