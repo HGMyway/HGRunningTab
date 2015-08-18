@@ -14,8 +14,9 @@ class HGBaseNavigationController: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navigationBar.barTintColor = UIColor.redColor()
+        navigationBar.barTintColor = SWColor.getMyThemeColor()
         navigationBar.tintColor = UIColor.whiteColor()
+        
 
     }
 

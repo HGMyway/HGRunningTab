@@ -19,16 +19,16 @@ class HGSidePanalBaseViewController: HGBaseViewController {
 
         // Do any additional setup after loading the view.
         hgTabbarController = tabBarController as! HGTabBarViewController
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "left", style: UIBarButtonItemStyle.Done, target: self, action: "leftSlideBtnClick:")
 
     }
     
-
     var hgTabbarController : HGTabBarViewController!
     
-    @IBAction func leftSlideBtnClick(sender: UIBarButtonItem) {
+    
+   func leftSlideBtnClick(sender: UIBarButtonItem) {
         hgTabbarController.leftItemClick()
-
-
     }
     
     

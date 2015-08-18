@@ -13,6 +13,7 @@
 		1118000B1B8186D700CDA96A /* HGTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1118000A1B8186D700CDA96A /* HGTabBarViewController.swift */; };
 		1118000F1B818F8200CDA96A /* HGMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1118000E1B818F8200CDA96A /* HGMineViewController.swift */; };
 		111800111B81920E00CDA96A /* HGSidePanalBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111800101B81920E00CDA96A /* HGSidePanalBaseViewController.swift */; };
+		1160B3241B82B3160092543D /* SwiftColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160B3231B82B3160092543D /* SwiftColors.swift */; };
 		11AF35421B81CFAE0000C16F /* HGSideCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF35411B81CFAE0000C16F /* HGSideCellModel.swift */; };
 		11AF35461B81D6F10000C16F /* HGSportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF35451B81D6F10000C16F /* HGSportViewController.swift */; };
 		11B24B371B7AF2580055EB9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B361B7AF2580055EB9A /* AppDelegate.swift */; };
@@ -22,6 +23,8 @@
 		11B24B4F1B7AF2580055EB9A /* HGRunningTabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B4E1B7AF2580055EB9A /* HGRunningTabTests.swift */; };
 		11B24B701B7AF6D00055EB9A /* HGBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B651B7AF6D00055EB9A /* HGBaseNavigationController.swift */; };
 		11B24B721B7AF6D00055EB9A /* HGBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B6B1B7AF6D00055EB9A /* HGBaseViewController.swift */; };
+		11DED09F1B831C6100366913 /* HGMotionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DED09E1B831C6100366913 /* HGMotionKit.swift */; };
+		11DED0A11B83361100366913 /* HGSettingSportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DED0A01B83361100366913 /* HGSettingSportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,7 @@
 		1118000A1B8186D700CDA96A /* HGTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGTabBarViewController.swift; sourceTree = "<group>"; };
 		1118000E1B818F8200CDA96A /* HGMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGMineViewController.swift; sourceTree = "<group>"; };
 		111800101B81920E00CDA96A /* HGSidePanalBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSidePanalBaseViewController.swift; sourceTree = "<group>"; };
+		1160B3231B82B3160092543D /* SwiftColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColors.swift; sourceTree = "<group>"; };
 		11AF35411B81CFAE0000C16F /* HGSideCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSideCellModel.swift; sourceTree = "<group>"; };
 		11AF35451B81D6F10000C16F /* HGSportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSportViewController.swift; sourceTree = "<group>"; };
 		11B24B311B7AF2580055EB9A /* HGRunningTab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HGRunningTab.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +58,8 @@
 		11B24B4E1B7AF2580055EB9A /* HGRunningTabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRunningTabTests.swift; sourceTree = "<group>"; };
 		11B24B651B7AF6D00055EB9A /* HGBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGBaseNavigationController.swift; sourceTree = "<group>"; };
 		11B24B6B1B7AF6D00055EB9A /* HGBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGBaseViewController.swift; sourceTree = "<group>"; };
+		11DED09E1B831C6100366913 /* HGMotionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGMotionKit.swift; sourceTree = "<group>"; };
+		11DED0A01B83361100366913 /* HGSettingSportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSettingSportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,8 @@
 		11B24B331B7AF2580055EB9A /* HGRunningTab */ = {
 			isa = PBXGroup;
 			children = (
-				11B24B581B7AF6D00055EB9A /* HGFrameWork */,
 				11B24B6C1B7AF6D00055EB9A /* HGSUV */,
+				11B24B581B7AF6D00055EB9A /* HGFrameWork */,
 				11B24B341B7AF2580055EB9A /* Supporting Files */,
 			);
 			path = HGRunningTab;
@@ -287,6 +293,8 @@
 		11B24B6D1B7AF6D00055EB9A /* HGtools */ = {
 			isa = PBXGroup;
 			children = (
+				1160B3231B82B3160092543D /* SwiftColors.swift */,
+				11DED09E1B831C6100366913 /* HGMotionKit.swift */,
 			);
 			path = HGtools;
 			sourceTree = "<group>";
@@ -303,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				11AF35451B81D6F10000C16F /* HGSportViewController.swift */,
+				11DED0A01B83361100366913 /* HGSettingSportViewController.swift */,
 			);
 			path = Sport;
 			sourceTree = "<group>";
@@ -414,10 +423,13 @@
 				1118000F1B818F8200CDA96A /* HGMineViewController.swift in Sources */,
 				11AF35421B81CFAE0000C16F /* HGSideCellModel.swift in Sources */,
 				11B24B721B7AF6D00055EB9A /* HGBaseViewController.swift in Sources */,
+				11DED0A11B83361100366913 /* HGSettingSportViewController.swift in Sources */,
 				11AF35461B81D6F10000C16F /* HGSportViewController.swift in Sources */,
 				11B24B371B7AF2580055EB9A /* AppDelegate.swift in Sources */,
 				111800111B81920E00CDA96A /* HGSidePanalBaseViewController.swift in Sources */,
 				1118000B1B8186D700CDA96A /* HGTabBarViewController.swift in Sources */,
+				11DED09F1B831C6100366913 /* HGMotionKit.swift in Sources */,
+				1160B3241B82B3160092543D /* SwiftColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

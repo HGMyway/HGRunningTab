@@ -14,6 +14,7 @@ class HGMineViewController: HGSidePanalBaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,3 +36,42 @@ class HGMineViewController: HGSidePanalBaseViewController {
     */
 
 }
+
+
+extension HGMineViewController: UITableViewDataSource{
+
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("headCell") as! UITableViewCell
+        
+        return cell
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+}
+
+extension HGMineViewController:UITableViewDelegate{
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
