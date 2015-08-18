@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class HGBaseViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -21,6 +23,7 @@ class HGBaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
 
     /*
     // MARK: - Navigation

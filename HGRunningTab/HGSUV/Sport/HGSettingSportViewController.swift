@@ -34,6 +34,7 @@ class HGSettingSportViewController: HGBaseViewController {
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.acceleLabel.text = "  x = \(x) \n  y = \(y) \n  z = \(z)"
+                
 //                println("x = \(x) y = \(y) z = \(z)")
             })
             
