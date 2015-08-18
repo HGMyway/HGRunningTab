@@ -28,19 +28,16 @@ class HGSettingSportViewController: HGBaseViewController {
         // Do any additional setup after loading the view.
         
         
-        if CLLocationManager.locationServicesEnabled(){
-
-            let  hgLocation = CLLocationManager()
-            hgLocation.delegate = self
-            
-            hgLocation.desiredAccuracy  = kCLLocationAccuracyNearestTenMeters
-//            hgLocation.distanceFilter = 1
-            hgLocation.requestWhenInUseAuthorization()
-//            hgLocation.requestAlwaysAuthorization()
-            hgLocation.startUpdatingLocation()
-
-        }
         
+        hgLocation.delegate = self
+        
+        hgLocation.desiredAccuracy  = kCLLocationAccuracyNearestTenMeters
+        //            hgLocation.distanceFilter = 1
+        hgLocation.requestWhenInUseAuthorization()
+        //            hgLocation.requestAlwaysAuthorization()
+        hgLocation.startUpdatingLocation()
+        
+
         
         
         
@@ -106,6 +103,18 @@ class HGSettingSportViewController: HGBaseViewController {
     }
     */
     
+                let  hgLocation = CLLocationManager()
+    
+    
+    @IBAction func startRunningAction(sender: AnyObject) {
+        if CLLocationManager.locationServicesEnabled(){
+            
+        }
+        
+        
+    }
+    
+    
 }
 
 //extension HGSettingSportViewController: HGMotionKitDelegate{
@@ -132,7 +141,7 @@ extension HGSettingSportViewController: CLLocationManagerDelegate{
         
         gyroLabel.text = "\(curLocation.coordinate.latitude)  .   \(curLocation.coordinate.longitude)"
         
-        
+        magnetometerLabel.text = "\(curLocation.horizontalAccuracy) + \(curLocation.verticalAccuracy)"
         
         
         
