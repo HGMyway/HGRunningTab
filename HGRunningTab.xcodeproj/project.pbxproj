@@ -80,6 +80,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11241FB91B83850C005C7294 /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FrameWork;
+			sourceTree = "<group>";
+		};
 		11B24B281B7AF2580055EB9A = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +118,7 @@
 		11B24B341B7AF2580055EB9A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				11241FB91B83850C005C7294 /* FrameWork */,
 				11B24B361B7AF2580055EB9A /* AppDelegate.swift */,
 				11B24B3C1B7AF2580055EB9A /* Main.storyboard */,
 				11B24B3F1B7AF2580055EB9A /* Images.xcassets */,
