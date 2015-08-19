@@ -350,6 +350,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tb0-MY-mCp">
+                                <rect key="frame" x="16" y="431" width="343" height="31"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="IZq-Fd-1W4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -358,13 +368,16 @@
                             <constraint firstItem="I7U-9s-1Qq" firstAttribute="leading" secondItem="htu-AP-ifC" secondAttribute="leadingMargin" id="9KH-OD-K1P"/>
                             <constraint firstItem="I7U-9s-1Qq" firstAttribute="trailing" secondItem="htu-AP-ifC" secondAttribute="trailingMargin" id="9dT-BM-C4f"/>
                             <constraint firstItem="RuI-1E-Jrv" firstAttribute="top" secondItem="Tpk-SR-JIW" secondAttribute="bottom" constant="8" id="BFD-d1-G4T"/>
+                            <constraint firstItem="tb0-MY-mCp" firstAttribute="leading" secondItem="htu-AP-ifC" secondAttribute="leadingMargin" id="EYQ-M3-Kwg"/>
                             <constraint firstItem="RuI-1E-Jrv" firstAttribute="trailing" secondItem="htu-AP-ifC" secondAttribute="trailingMargin" id="Emz-yC-J4z"/>
                             <constraint firstItem="I7U-9s-1Qq" firstAttribute="top" secondItem="fnC-zk-vn8" secondAttribute="bottom" constant="8" id="F5p-Vr-YVc"/>
                             <constraint firstItem="M15-hw-IYA" firstAttribute="top" secondItem="0gY-0S-36t" secondAttribute="bottom" id="NTJ-kw-6oT"/>
+                            <constraint firstItem="tb0-MY-mCp" firstAttribute="top" secondItem="RuI-1E-Jrv" secondAttribute="bottom" constant="13" id="PD5-oE-U4Y"/>
                             <constraint firstItem="0gY-0S-36t" firstAttribute="leading" secondItem="htu-AP-ifC" secondAttribute="leadingMargin" constant="-16" id="QxA-wq-0i6"/>
                             <constraint firstItem="RuI-1E-Jrv" firstAttribute="leading" secondItem="htu-AP-ifC" secondAttribute="leadingMargin" id="gpg-mX-wUA"/>
                             <constraint firstItem="Tpk-SR-JIW" firstAttribute="top" secondItem="I7U-9s-1Qq" secondAttribute="bottom" constant="8" id="ivv-G3-H6o"/>
                             <constraint firstItem="Tpk-SR-JIW" firstAttribute="leading" secondItem="htu-AP-ifC" secondAttribute="leadingMargin" id="mDS-tY-vSz"/>
+                            <constraint firstItem="tb0-MY-mCp" firstAttribute="trailing" secondItem="htu-AP-ifC" secondAttribute="trailingMargin" id="xiP-ih-2k3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="运动设置" id="s7D-qG-jWY"/>
@@ -372,6 +385,7 @@
                         <outlet property="acceleLabel" destination="I7U-9s-1Qq" id="Eev-gu-Yid"/>
                         <outlet property="gyroLabel" destination="Tpk-SR-JIW" id="H2j-0M-I6l"/>
                         <outlet property="magnetometerLabel" destination="RuI-1E-Jrv" id="MpZ-bp-TCg"/>
+                        <outlet property="speedLabel" destination="tb0-MY-mCp" id="LWi-Qi-C58"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQf-dq-jyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -423,7 +437,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Nn-zl-INt" id="T2y-nI-QxB">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ufX-In-Cbx">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="ufX-In-Cbx">
                                                     <rect key="frame" x="23" y="11" width="55" height="52.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="辉哥很无奈" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SV-X2-beH">
@@ -505,10 +519,10 @@
             </objects>
             <point key="canvasLocation" x="214.5" y="818.5"/>
         </scene>
-        <!--View Controller-->
+        <!--item1-->
         <scene sceneID="p2t-Va-b6j">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="lrS-s5-d2C" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="lrS-s5-d2C" customClass="HGSidePanalBaseViewController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="htX-vn-G1q"/>
                         <viewControllerLayoutGuide type="bottom" id="96B-cC-9ST"/>
@@ -518,70 +532,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3xj-Vt-s3E"/>
+                    <navigationItem key="navigationItem" title="item1" id="3xj-Vt-s3E"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TlS-32-HKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075.5" y="1601.5"/>
+            <point key="canvasLocation" x="1065.5" y="1601.5"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="9zh-wF-kdN">
+        <!--item2-->
+        <scene sceneID="sCz-l0-HRH">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="FVh-f0-Vtm" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AiE-FI-n0m">
+                <viewController hidesBottomBarWhenPushed="YES" id="Lcc-B5-LCw" customClass="HGSidePanalBaseViewController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4fs-rT-5Al"/>
+                        <viewControllerLayoutGuide type="bottom" id="yYW-oZ-tS7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zgu-X5-vXf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cDl-5z-t5C">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cDl-5z-t5C" id="l1T-mC-lmP">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="FVh-f0-Vtm" id="ibV-0w-BjK"/>
-                            <outlet property="delegate" destination="FVh-f0-Vtm" id="2Qn-ng-4Ch"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Jyf-re-cK8"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bz7-gM-1hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="item2" id="l96-HJ-g0a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bok-um-qAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490.5" y="1616.5"/>
+            <point key="canvasLocation" x="1490.5" y="1601.5"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="Xt9-Yc-ajT">
+        <!--item3-->
+        <scene sceneID="gGN-fD-LXr">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="cTX-Kg-ziX" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SkK-Us-FgJ">
+                <viewController hidesBottomBarWhenPushed="YES" id="LG8-vN-rBp" customClass="HGSidePanalBaseViewController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8HZ-cD-Lz0"/>
+                        <viewControllerLayoutGuide type="bottom" id="KlK-sf-Vg8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZfN-li-pXd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Znk-7A-7gz">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Znk-7A-7gz" id="Zkv-ep-qab">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="cTX-Kg-ziX" id="pfs-C7-egX"/>
-                            <outlet property="delegate" destination="cTX-Kg-ziX" id="rR6-Ez-BVd"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="GVv-nm-gD0"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B8e-zc-WgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="item3" id="I66-ON-EZs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jXB-DX-peM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1951.5" y="1616.5"/>
+            <point key="canvasLocation" x="1951.5" y="1601.5"/>
         </scene>
         <!--Item-->
         <scene sceneID="vgi-Ak-A4u">
             <objects>
-                <navigationController hidesBottomBarWhenPushed="YES" id="oNw-rV-WFp" sceneMemberID="viewController">
+                <navigationController hidesBottomBarWhenPushed="YES" id="oNw-rV-WFp" customClass="HGBaseNavigationController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="first" id="RWY-KT-6xg"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ymU-7S-Dvd">
@@ -589,7 +587,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="cTX-Kg-ziX" kind="relationship" relationship="rootViewController" id="lDl-dB-g3W"/>
+                        <segue destination="LG8-vN-rBp" kind="relationship" relationship="rootViewController" id="YE2-bu-rgH"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0o-S4-rmO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -599,7 +597,7 @@
         <!--Item-->
         <scene sceneID="c6a-mH-Su6">
             <objects>
-                <navigationController id="MOI-rb-Dvy" sceneMemberID="viewController">
+                <navigationController id="MOI-rb-Dvy" customClass="HGBaseNavigationController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="first" id="C8A-rO-NvR"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aOM-0F-fDo">
@@ -607,7 +605,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="FVh-f0-Vtm" kind="relationship" relationship="rootViewController" id="y5z-rp-ECz"/>
+                        <segue destination="Lcc-B5-LCw" kind="relationship" relationship="rootViewController" id="Slj-E1-2Dn"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFm-83-kSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -617,7 +615,7 @@
         <!--Item-->
         <scene sceneID="Zro-py-Vck">
             <objects>
-                <navigationController id="ec2-d9-GwG" sceneMemberID="viewController">
+                <navigationController id="ec2-d9-GwG" customClass="HGBaseNavigationController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="first" selectedImage="first" id="86z-5c-hdH"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YQg-Us-lf3">
@@ -636,15 +634,12 @@
         <scene sceneID="UeJ-Tz-P33">
             <objects>
                 <navigationController title="设置" id="uGV-eL-5gE" customClass="HGBaseNavigationController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="first" id="b8X-xw-SOn"/>
+                    <tabBarItem key="tabBarItem" title="设置" image="first" id="b8X-xw-SOn"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Elr-aa-PGP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="z9c-ZW-E5o">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
                         <segue destination="x1a-Xo-dWG" kind="relationship" relationship="rootViewController" id="8Wc-Be-olQ"/>
                     </connections>

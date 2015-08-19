@@ -19,6 +19,22 @@ class HGSettingSportViewController: HGBaseViewController {
     
     @IBOutlet weak var magnetometerLabel: UILabel!
     
+    @IBOutlet weak var speedLabel: UILabel!
+    
+    
+    //变量
+    var speedValue :Double{
+        set{
+            speedLabel.text = "\(newValue)"
+        }
+        
+        get{
+                return NSNumberFormatter().numberFromString(speedLabel.text!)!.doubleValue
+        }
+        
+    }
+    
+    var forceLocation : CLLocation?
     
 //    let hgMotion = HGMotionKit.sharedInstance
     
@@ -110,8 +126,6 @@ class HGSettingSportViewController: HGBaseViewController {
                 
                 hgLocationManager.startUpdatingLocation()
                 
-                
-                
                 sender.selected = true
                 sender.setTitle("继续", forState: UIControlState.Normal)
             }else
@@ -150,14 +164,26 @@ extension HGSettingSportViewController: CLLocationManagerDelegate{
         
       let   curLocation = locations.last as! CLLocation
         
-        println("\(curLocation)")
-        
         acceleLabel.text = curLocation.description
         
         gyroLabel.text = "\(curLocation.coordinate.latitude)  .   \(curLocation.coordinate.longitude)"
         
         magnetometerLabel.text = "\(curLocation.horizontalAccuracy) + \(curLocation.verticalAccuracy)"
         
+        if  curLocation.speed > 0
+        {
+            if forceLocation != nil {
+                 let  intervalTime = curLocation.timestamp.timeIntervalSinceDate(forceLocation!.timestamp)
+                    speedValue = speedValue + intervalTime*(curLocation.speed + forceLocation!.speed)/2.0
+
+            }
+            forceLocation = curLocation
+        }
+        
+        
+        
+        
+      
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
