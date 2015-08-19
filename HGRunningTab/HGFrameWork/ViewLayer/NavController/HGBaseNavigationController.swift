@@ -17,6 +17,8 @@ class HGBaseNavigationController: UINavigationController {
         navigationBar.barTintColor = SWColor.getMyThemeColor()
         navigationBar.tintColor = UIColor.whiteColor()
         
+        hidesBottomBarWhenPushed = true
+        
 
     }
 
@@ -24,6 +26,7 @@ class HGBaseNavigationController: UINavigationController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*

@@ -29,16 +29,6 @@ class HGSettingSportViewController: HGBaseViewController {
         
         
         
-        hgLocation.delegate = self
-        
-        hgLocation.desiredAccuracy  = kCLLocationAccuracyNearestTenMeters
-        //            hgLocation.distanceFilter = 1
-        hgLocation.requestWhenInUseAuthorization()
-        //            hgLocation.requestAlwaysAuthorization()
-        hgLocation.startUpdatingLocation()
-        
-
-        
         
         
         //        hgMotion.delegate = self
@@ -103,16 +93,41 @@ class HGSettingSportViewController: HGBaseViewController {
     }
     */
     
-                let  hgLocation = CLLocationManager()
     
+    let  hgLocationManager = CLLocationManager()
     
-    @IBAction func startRunningAction(sender: AnyObject) {
-        if CLLocationManager.locationServicesEnabled(){
+    @IBAction func startRunningAction(sender: UIButton) {
+        
+        if sender.selected == false {
             
+            if CLLocationManager.locationServicesEnabled(){
+                hgLocationManager.delegate = self
+                hgLocationManager.desiredAccuracy  = kCLLocationAccuracyBest //定位精度
+
+                hgLocationManager.distanceFilter = 0.5 //距离过滤，设备移动更新位置信息的最小距离
+                hgLocationManager.requestWhenInUseAuthorization()
+                
+                
+                hgLocationManager.startUpdatingLocation()
+                
+                
+                
+                sender.selected = true
+                sender.setTitle("继续", forState: UIControlState.Normal)
+            }else
+            {
+                sender.setTitle("定位失败", forState: UIControlState.Normal)
+            }
+            
+        }else{
+            hgLocationManager.stopUpdatingLocation()
+            sender.selected = false
         }
         
-        
+      
     }
+    
+
     
     
 }
@@ -143,7 +158,9 @@ extension HGSettingSportViewController: CLLocationManagerDelegate{
         
         magnetometerLabel.text = "\(curLocation.horizontalAccuracy) + \(curLocation.verticalAccuracy)"
         
-        
+    }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         
     }
 }
