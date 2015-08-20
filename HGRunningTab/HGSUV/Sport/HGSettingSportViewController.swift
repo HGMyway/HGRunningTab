@@ -19,6 +19,22 @@ class HGSettingSportViewController: HGBaseViewController {
     
     @IBOutlet weak var magnetometerLabel: UILabel!
     
+    @IBOutlet weak var speedLabel: UILabel!
+    
+    
+    //变量
+    var speedValue :Double{
+        set{
+            speedLabel.text = "\(newValue)"
+        }
+        
+        get{
+                return NSNumberFormatter().numberFromString(speedLabel.text!)!.doubleValue
+        }
+        
+    }
+    
+    var forceLocation : CLLocation?
     
 //    let hgMotion = HGMotionKit.sharedInstance
     
@@ -28,16 +44,6 @@ class HGSettingSportViewController: HGBaseViewController {
         // Do any additional setup after loading the view.
         
         
-        
-        hgLocation.delegate = self
-        
-        hgLocation.desiredAccuracy  = kCLLocationAccuracyNearestTenMeters
-        //            hgLocation.distanceFilter = 1
-        hgLocation.requestWhenInUseAuthorization()
-        //            hgLocation.requestAlwaysAuthorization()
-        hgLocation.startUpdatingLocation()
-        
-
         
         
         
@@ -103,16 +109,39 @@ class HGSettingSportViewController: HGBaseViewController {
     }
     */
     
-                let  hgLocation = CLLocationManager()
     
+    let  hgLocationManager = CLLocationManager()
     
-    @IBAction func startRunningAction(sender: AnyObject) {
-        if CLLocationManager.locationServicesEnabled(){
+    @IBAction func startRunningAction(sender: UIButton) {
+        
+        if sender.selected == false {
             
+            if CLLocationManager.locationServicesEnabled(){
+                hgLocationManager.delegate = self
+                hgLocationManager.desiredAccuracy  = kCLLocationAccuracyBest //定位精度
+
+                hgLocationManager.distanceFilter = 0.5 //距离过滤，设备移动更新位置信息的最小距离
+                hgLocationManager.requestWhenInUseAuthorization()
+                
+                
+                hgLocationManager.startUpdatingLocation()
+                
+                sender.selected = true
+                sender.setTitle("继续", forState: UIControlState.Normal)
+            }else
+            {
+                sender.setTitle("定位失败", forState: UIControlState.Normal)
+            }
+            
+        }else{
+            hgLocationManager.stopUpdatingLocation()
+            sender.selected = false
         }
         
-        
+      
     }
+    
+
     
     
 }
@@ -135,15 +164,29 @@ extension HGSettingSportViewController: CLLocationManagerDelegate{
         
       let   curLocation = locations.last as! CLLocation
         
-        println("\(curLocation)")
-        
         acceleLabel.text = curLocation.description
         
         gyroLabel.text = "\(curLocation.coordinate.latitude)  .   \(curLocation.coordinate.longitude)"
         
         magnetometerLabel.text = "\(curLocation.horizontalAccuracy) + \(curLocation.verticalAccuracy)"
         
+        if  curLocation.speed > 0
+        {
+            if forceLocation != nil {
+                 let  intervalTime = curLocation.timestamp.timeIntervalSinceDate(forceLocation!.timestamp)
+                    speedValue = speedValue + intervalTime*(curLocation.speed + forceLocation!.speed)/2.0
+
+            }
+            forceLocation = curLocation
+        }
         
+        
+        
+        
+      
+    }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         
     }
 }

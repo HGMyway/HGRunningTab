@@ -92,17 +92,7 @@ extension HGTabBarViewController: HGSidePanelViewControllerDelegate {
     func panelCellClick(selectedModel: HGSideCellModel) {
         panalDelegate?.collapseSidePanels?()
         
-        switch selectedModel.DNAStr {
-        case "sport":
-            self.selectedIndex = 0
-            break
-        case "myway":
-            self.selectedIndex = 1
-            break
-        default:
-            break
-        }
-        
+        selectedIndex = selectedModel.selectIndex
         
     }
 }
