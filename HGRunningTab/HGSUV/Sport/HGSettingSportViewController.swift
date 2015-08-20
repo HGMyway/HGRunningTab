@@ -31,17 +31,11 @@ class HGSettingSportViewController: HGBaseViewController {
         
         hgLocation.delegate = self
         
-        hgMotion.getAccelerometerValues(interval: 1.0) { (x, y, z) -> () in
-            
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.acceleLabel.text = "  x = \(x) \n  y = \(y) \n  z = \(z)"
-                
-//                println("x = \(x) y = \(y) z = \(z)")
-            })
-            
-            
-        }
+        hgLocation.desiredAccuracy  = kCLLocationAccuracyNearestTenMeters
+        //            hgLocation.distanceFilter = 1
+        hgLocation.requestWhenInUseAuthorization()
+        //            hgLocation.requestAlwaysAuthorization()
+        hgLocation.startUpdatingLocation()
         
 
         
