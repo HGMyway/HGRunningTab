@@ -9,7 +9,7 @@
 import UIKit
 
 
-class HGSportViewController: HGSidePanalBaseViewController {
+class HGSportViewController: HGBaseRootViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

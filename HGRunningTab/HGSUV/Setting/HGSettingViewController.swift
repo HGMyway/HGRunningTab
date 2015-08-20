@@ -8,6 +8,6 @@
 
 import UIKit
 
-class HGSettingViewController: HGSidePanalBaseViewController {
+class HGSettingViewController: HGBaseRootViewController {
    
 }

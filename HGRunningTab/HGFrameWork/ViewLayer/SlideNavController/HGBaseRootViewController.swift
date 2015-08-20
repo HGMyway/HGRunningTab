@@ -1,38 +1,34 @@
 //
-//  HGSidePanalBaseViewController.swift
+//  HGBaseRootViewController.swift
 //  HGRunningTab
 //
-//  Created by 任是无情也动人 on 15/8/17.
+//  Created by 任是无情也动人 on 15/8/20.
 //  Copyright (c) 2015年 ismyway. All rights reserved.
 //
 
 import UIKit
 
+class HGBaseRootViewController: HGBaseViewController {
 
-
-class HGSidePanalBaseViewController: HGBaseViewController {
-
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         hgTabbarController = tabBarController as! HGTabBarViewController
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "left", style: UIBarButtonItemStyle.Done, target: self, action: "leftSlideBtnClick:")
+        
+        hidesBottomBarWhenPushed = true
 
     }
-    
+
     var hgTabbarController : HGTabBarViewController!
     
     
-   func leftSlideBtnClick(sender: UIBarButtonItem) {
+    func leftSlideBtnClick(sender: UIBarButtonItem) {
         hgTabbarController.leftItemClick()
     }
-    
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,12 +45,5 @@ class HGSidePanalBaseViewController: HGBaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 }
-
-
-
-
-
-
-
-

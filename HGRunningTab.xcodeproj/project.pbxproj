@@ -12,7 +12,7 @@
 		111800091B8186B300CDA96A /* HGBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111800081B8186B300CDA96A /* HGBaseTableViewController.swift */; };
 		1118000B1B8186D700CDA96A /* HGTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1118000A1B8186D700CDA96A /* HGTabBarViewController.swift */; };
 		1118000F1B818F8200CDA96A /* HGMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1118000E1B818F8200CDA96A /* HGMineViewController.swift */; };
-		111800111B81920E00CDA96A /* HGSidePanalBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111800101B81920E00CDA96A /* HGSidePanalBaseViewController.swift */; };
+		1150B6E01B855FD1006158E6 /* HGBaseRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1150B6DF1B855FD1006158E6 /* HGBaseRootViewController.swift */; };
 		115BE63B1B84C876008A6D1A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115BE63A1B84C876008A6D1A /* CoreLocation.framework */; };
 		115BE63F1B84D6CB008A6D1A /* HGSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115BE63E1B84D6CB008A6D1A /* HGSettingViewController.swift */; };
 		1160B3241B82B3160092543D /* SwiftColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160B3231B82B3160092543D /* SwiftColors.swift */; };
@@ -45,7 +45,7 @@
 		111800081B8186B300CDA96A /* HGBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGBaseTableViewController.swift; sourceTree = "<group>"; };
 		1118000A1B8186D700CDA96A /* HGTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGTabBarViewController.swift; sourceTree = "<group>"; };
 		1118000E1B818F8200CDA96A /* HGMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGMineViewController.swift; sourceTree = "<group>"; };
-		111800101B81920E00CDA96A /* HGSidePanalBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSidePanalBaseViewController.swift; sourceTree = "<group>"; };
+		1150B6DF1B855FD1006158E6 /* HGBaseRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGBaseRootViewController.swift; sourceTree = "<group>"; };
 		115BE63A1B84C876008A6D1A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		115BE63E1B84D6CB008A6D1A /* HGSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSettingViewController.swift; sourceTree = "<group>"; };
 		1160B3231B82B3160092543D /* SwiftColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColors.swift; sourceTree = "<group>"; };
@@ -281,7 +281,7 @@
 				111800061B81865B00CDA96A /* HGContentViewController.swift */,
 				110133A71B817A3A00EE81A7 /* HGSidePanelViewController.swift */,
 				11AF35411B81CFAE0000C16F /* HGSideCellModel.swift */,
-				111800101B81920E00CDA96A /* HGSidePanalBaseViewController.swift */,
+				1150B6DF1B855FD1006158E6 /* HGBaseRootViewController.swift */,
 			);
 			path = SlideNavController;
 			sourceTree = "<group>";
@@ -396,6 +396,7 @@
 				TargetAttributes = {
 					11B24B301B7AF2580055EB9A = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = ZA62J628R5;
 					};
 					11B24B471B7AF2580055EB9A = {
 						CreatedOnToolsVersion = 6.4;
@@ -453,12 +454,12 @@
 				111800071B81865B00CDA96A /* HGContentViewController.swift in Sources */,
 				111800091B8186B300CDA96A /* HGBaseTableViewController.swift in Sources */,
 				1118000F1B818F8200CDA96A /* HGMineViewController.swift in Sources */,
+				1150B6E01B855FD1006158E6 /* HGBaseRootViewController.swift in Sources */,
 				11AF35421B81CFAE0000C16F /* HGSideCellModel.swift in Sources */,
 				11B24B721B7AF6D00055EB9A /* HGBaseViewController.swift in Sources */,
 				11DED0A11B83361100366913 /* HGSettingSportViewController.swift in Sources */,
 				11AF35461B81D6F10000C16F /* HGSportViewController.swift in Sources */,
 				11B24B371B7AF2580055EB9A /* AppDelegate.swift in Sources */,
-				111800111B81920E00CDA96A /* HGSidePanalBaseViewController.swift in Sources */,
 				1118000B1B8186D700CDA96A /* HGTabBarViewController.swift in Sources */,
 				11DED09F1B831C6100366913 /* HGMotionKit.swift in Sources */,
 				1160B3241B82B3160092543D /* SwiftColors.swift in Sources */,
@@ -588,10 +589,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HGRunningTab/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -599,10 +603,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HGRunningTab/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

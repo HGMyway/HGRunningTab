@@ -17,7 +17,7 @@ class HGBaseNavigationController: UINavigationController {
         navigationBar.barTintColor = SWColor.getMyThemeColor()
         navigationBar.tintColor = UIColor.whiteColor()
         
-        hidesBottomBarWhenPushed = true
+
         
 
     }

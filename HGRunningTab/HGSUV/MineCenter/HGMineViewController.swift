@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HGMineViewController: HGSidePanalBaseViewController {
+class HGMineViewController: HGBaseRootViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
