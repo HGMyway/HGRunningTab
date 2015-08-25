@@ -180,7 +180,7 @@ extension HGSettingSportViewController: CLLocationManagerDelegate{
             forceLocation = curLocation
         }
         
-        
+        println("dddd")
         
         
       

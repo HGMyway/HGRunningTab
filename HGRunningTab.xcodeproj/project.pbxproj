@@ -15,6 +15,8 @@
 		1150B6E01B855FD1006158E6 /* HGBaseRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1150B6DF1B855FD1006158E6 /* HGBaseRootViewController.swift */; };
 		115BE63B1B84C876008A6D1A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115BE63A1B84C876008A6D1A /* CoreLocation.framework */; };
 		115BE63F1B84D6CB008A6D1A /* HGSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115BE63E1B84D6CB008A6D1A /* HGSettingViewController.swift */; };
+		115E9D1B1B8BE398007F16CA /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115E9D1A1B8BE398007F16CA /* HealthKit.framework */; };
+		115E9D1D1B8BFE85007F16CA /* HGLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115E9D1C1B8BFE85007F16CA /* HGLocationManager.swift */; };
 		1160B3241B82B3160092543D /* SwiftColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160B3231B82B3160092543D /* SwiftColors.swift */; };
 		11AF35421B81CFAE0000C16F /* HGSideCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF35411B81CFAE0000C16F /* HGSideCellModel.swift */; };
 		11AF35461B81D6F10000C16F /* HGSportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF35451B81D6F10000C16F /* HGSportViewController.swift */; };
@@ -48,6 +50,9 @@
 		1150B6DF1B855FD1006158E6 /* HGBaseRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGBaseRootViewController.swift; sourceTree = "<group>"; };
 		115BE63A1B84C876008A6D1A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		115BE63E1B84D6CB008A6D1A /* HGSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSettingViewController.swift; sourceTree = "<group>"; };
+		115E9D191B8BE382007F16CA /* HGRunningTab.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HGRunningTab.entitlements; sourceTree = "<group>"; };
+		115E9D1A1B8BE398007F16CA /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		115E9D1C1B8BFE85007F16CA /* HGLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGLocationManager.swift; sourceTree = "<group>"; };
 		1160B3231B82B3160092543D /* SwiftColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColors.swift; sourceTree = "<group>"; };
 		11AF35411B81CFAE0000C16F /* HGSideCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSideCellModel.swift; sourceTree = "<group>"; };
 		11AF35451B81D6F10000C16F /* HGSportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSportViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				115BE63B1B84C876008A6D1A /* CoreLocation.framework in Frameworks */,
+				115E9D1B1B8BE398007F16CA /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,16 +91,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11241FB91B83850C005C7294 /* FrameWork */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = FrameWork;
-			sourceTree = "<group>";
-		};
 		115BE63C1B84C888008A6D1A /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				115E9D1A1B8BE398007F16CA /* HealthKit.framework */,
 				115BE63A1B84C876008A6D1A /* CoreLocation.framework */,
 			);
 			name = FrameWork;
@@ -140,11 +140,11 @@
 		11B24B341B7AF2580055EB9A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				11241FB91B83850C005C7294 /* FrameWork */,
 				11B24B361B7AF2580055EB9A /* AppDelegate.swift */,
 				11B24B3C1B7AF2580055EB9A /* Main.storyboard */,
 				11B24B3F1B7AF2580055EB9A /* Images.xcassets */,
 				11B24B411B7AF2580055EB9A /* LaunchScreen.xib */,
+				115E9D191B8BE382007F16CA /* HGRunningTab.entitlements */,
 				11B24B351B7AF2580055EB9A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -326,6 +326,7 @@
 			children = (
 				1160B3231B82B3160092543D /* SwiftColors.swift */,
 				11DED09E1B831C6100366913 /* HGMotionKit.swift */,
+				115E9D1C1B8BFE85007F16CA /* HGLocationManager.swift */,
 			);
 			path = HGtools;
 			sourceTree = "<group>";
@@ -397,6 +398,14 @@
 					11B24B301B7AF2580055EB9A = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = ZA62J628R5;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					11B24B471B7AF2580055EB9A = {
 						CreatedOnToolsVersion = 6.4;
@@ -453,6 +462,7 @@
 				115BE63F1B84D6CB008A6D1A /* HGSettingViewController.swift in Sources */,
 				111800071B81865B00CDA96A /* HGContentViewController.swift in Sources */,
 				111800091B8186B300CDA96A /* HGBaseTableViewController.swift in Sources */,
+				115E9D1D1B8BFE85007F16CA /* HGLocationManager.swift in Sources */,
 				1118000F1B818F8200CDA96A /* HGMineViewController.swift in Sources */,
 				1150B6E01B855FD1006158E6 /* HGBaseRootViewController.swift in Sources */,
 				11AF35421B81CFAE0000C16F /* HGSideCellModel.swift in Sources */,
@@ -589,6 +599,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HGRunningTab/HGRunningTab.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HGRunningTab/Info.plist;
@@ -603,6 +614,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HGRunningTab/HGRunningTab.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HGRunningTab/Info.plist;
