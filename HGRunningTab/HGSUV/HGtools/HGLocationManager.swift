@@ -10,7 +10,12 @@ import Foundation
 
 import CoreLocation
 
-public class HGLocationManager {
+protocol HGLocationManagerDelegate : NSObjectProtocol {
+    
+}
+
+
+public class HGLocationManager: NSObject, CLLocationManagerDelegate {
     
     
 //    提供静态访问方法
@@ -20,14 +25,27 @@ public class HGLocationManager {
         }
         return Inner.instance!
     }
-
-//    私有化构造方法
-    private init(){
-    }
     
 //    通过结构体保存实例的引用
     private struct Inner {
         private static var instance: HGLocationManager?
         private static var token: dispatch_once_t = 0
     }
+    
+    
+//    ／／／／／／／
+    
+    static let sharedInstance = HGLocationManager()
+    
+   private let locationManager: CLLocationManager
+    
+    
+    private  override init() {
+        locationManager = CLLocationManager()
+    
+    }  //私有化init方法，防止其他对象使用这个类的默认的（）
+    
+    
 }
+
+

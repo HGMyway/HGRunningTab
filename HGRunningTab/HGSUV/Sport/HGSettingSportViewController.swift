@@ -112,6 +112,7 @@ class HGSettingSportViewController: HGBaseViewController {
     
     let  hgLocationManager = CLLocationManager()
     
+    
     @IBAction func startRunningAction(sender: UIButton) {
         
         if sender.selected == false {
