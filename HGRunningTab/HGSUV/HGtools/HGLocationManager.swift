@@ -5,7 +5,7 @@
 //  Created by 任是无情也动人 on 15/8/25.
 //  Copyright (c) 2015年 ismyway. All rights reserved.
 //
-
+ 
 import Foundation
 
 import CoreLocation
@@ -45,6 +45,11 @@ public class HGLocationManager: NSObject, CLLocationManagerDelegate {
     
     }  //私有化init方法，防止其他对象使用这个类的默认的（）
     
+    func startUpdatingLocation(){
+        locationManager.startUpdatingLocation()
+    }
+    
+
     
 }
 
