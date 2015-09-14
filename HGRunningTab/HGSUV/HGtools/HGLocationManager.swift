@@ -50,7 +50,6 @@ public class HGLocationManager: NSObject, CLLocationManagerDelegate {
     }
     
 
-    
 }
 
 

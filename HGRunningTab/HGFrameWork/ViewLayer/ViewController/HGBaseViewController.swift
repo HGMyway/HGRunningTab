@@ -16,6 +16,7 @@ class HGBaseViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationItem
     }
 
     override func didReceiveMemoryWarning() {

@@ -113,7 +113,7 @@ extension SWColor {
     self.init(hexString: hexString as String, alpha: alpha)
   }
     
-    class func getMyThemeColor() -> UIColor{
+    class func themeColor() -> UIColor{
   
         return SWColor(hexString: "CB3203")!
     }

@@ -22,7 +22,7 @@ class HGSideCellModel {
         self.DNAStr = DNAStr
         self.selectIndex = selectIndex
         
-    }
+    } 
     class func allCellData() -> Array<HGSideCellModel>{
         
         if let hgTabbar = UIStoryboard.tabbarViewController(){
