@@ -419,6 +419,9 @@
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
 						};
 					};
 					11B24B471B7AF2580055EB9A = {
