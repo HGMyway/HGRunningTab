@@ -8,10 +8,49 @@
 
 import UIKit
 
+protocol FaceViewDataDource: class{
+    func smilinesForFaceView(sender: HGFaceView) -> Double?
+}
+
+@IBDesignable
 class HGFaceView: UIView {
     
+    
+    weak var dataSource: FaceViewDataDource?
+    
+    
+    func scale(gesture: UIPinchGestureRecognizer){
+        if gesture.state == .Changed {
+                scale *= gesture.scale
+            gesture.scale = 1
+        }
+    }
+    
+    
+    override func drawRect(rect: CGRect) {
+        // Drawing code
+        let facePath = UIBezierPath(arcCenter: faceCenter, radius: faceRadius, startAngle: 0, endAngle: CGFloat(2 * M_PI), clockwise: true)
+        
+        facePath.lineWidth = lineWidth
+        lineColor.set()
+        
+        facePath.stroke()
+        
+        bezierPathForEye(.Left).stroke()
+        bezierPathForEye(.Right).stroke()
+        let smiliness = dataSource?.smilinesForFaceView(self) ?? 0.0
+        let smilePath = bezierPathForSmile(smiliness)
+        smilePath.stroke()
+        
+        
+    }
+
+    
+    @IBInspectable
     var scale : CGFloat = 0.9 { didSet{ setNeedsDisplay() }}
+        @IBInspectable
     var lineWidth : CGFloat = 3 {   didSet{  setNeedsDisplay()} }
+        @IBInspectable
     var lineColor : UIColor = SWColor.themeColor() {didSet{setNeedsDisplay()} }
     
     var faceCenter : CGPoint {
@@ -70,22 +109,5 @@ class HGFaceView: UIView {
         
     }
 
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-        let facePath = UIBezierPath(arcCenter: faceCenter, radius: faceRadius, startAngle: 0, endAngle: CGFloat(2 * M_PI), clockwise: true)
-        
-        facePath.lineWidth = lineWidth
-        lineColor.set()
-        
-        facePath.stroke()
-        
-        bezierPathForEye(.Left).stroke()
-        bezierPathForEye(.Right).stroke()
-        let smiliness = 0.75
-        let smilePath = bezierPathForSmile(smiliness)
-        smilePath.stroke()
-
-
-    }
     
 }

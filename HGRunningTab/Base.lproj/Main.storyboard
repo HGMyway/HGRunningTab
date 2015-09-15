@@ -585,6 +585,15 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" red="0.1988273414" green="0.94509803920000002" blue="0.22078770189999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="O8N-JU-UUt" appends="YES" id="QUz-G4-HFH"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -596,8 +605,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="笑脸" id="kIr-4C-sqY"/>
+                    <connections>
+                        <outlet property="faceView" destination="kTv-AY-WrX" id="Z30-8A-DqR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8i-3T-XM4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="O8N-JU-UUt">
+                    <connections>
+                        <action selector="changehappiness:" destination="IX2-es-hYA" id="qSc-qZ-5fZ"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1123.5" y="1601.5"/>
         </scene>
