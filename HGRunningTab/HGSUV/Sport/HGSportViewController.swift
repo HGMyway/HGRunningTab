@@ -16,8 +16,6 @@ class HGSportViewController: HGBaseRootViewController {
 
         // Do any additional setup after loading the view.
         
-        navigationItem
-        
     }
 
     override func didReceiveMemoryWarning() {
