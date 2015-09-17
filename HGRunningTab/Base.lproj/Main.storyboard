@@ -496,10 +496,10 @@
             </objects>
             <point key="canvasLocation" x="647.5" y="1601.5"/>
         </scene>
-        <!--View Controller-->
+        <!--text-->
         <scene sceneID="6G5-qu-jom">
             <objects>
-                <viewController id="vCR-Bt-MBl" sceneMemberID="viewController">
+                <viewController title="text" id="vCR-Bt-MBl" customClass="TextViewController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VFQ-jm-mv2"/>
                         <viewControllerLayoutGuide type="bottom" id="CDZ-3Z-TUs"/>
@@ -507,15 +507,33 @@
                     <view key="view" contentMode="scaleToFill" id="Mdl-Z5-RYV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUz-d0-Vci">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lUz-d0-Vci" firstAttribute="bottom" secondItem="CDZ-3Z-TUs" secondAttribute="top" id="4vO-eR-tT4"/>
+                            <constraint firstItem="lUz-d0-Vci" firstAttribute="top" secondItem="Mdl-Z5-RYV" secondAttribute="top" id="9DR-PF-LjR"/>
+                            <constraint firstAttribute="trailing" secondItem="lUz-d0-Vci" secondAttribute="trailing" id="mRO-cC-vPi"/>
+                            <constraint firstItem="lUz-d0-Vci" firstAttribute="leading" secondItem="Mdl-Z5-RYV" secondAttribute="leading" id="nMw-c7-33G"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vdx-eJ-OcJ">
                         <nil key="title"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="lUz-d0-Vci" id="StA-V5-N7J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UpH-bd-e2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1123.5" y="2399.5"/>
+            <point key="canvasLocation" x="1123.5" y="2385.5"/>
         </scene>
         <!--我-->
         <scene sceneID="3Pu-YO-qG1">
@@ -562,7 +580,7 @@
         <!--笑脸-->
         <scene sceneID="usm-yV-X5B">
             <objects>
-                <viewController title="笑脸" hidesBottomBarWhenPushed="YES" id="IX2-es-hYA" customClass="HGFaceTimeViewController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="笑脸" hidesBottomBarWhenPushed="YES" id="IX2-es-hYA" customClass="HGHistoryFaceTimeViewController" customModule="HGRunningTab" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HH0-u7-nLp"/>
                         <viewControllerLayoutGuide type="bottom" id="kPd-ys-mDk"/>
@@ -573,17 +591,6 @@
                         <subviews>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="kTv-AY-WrX" customClass="HGFaceView" customModule="HGRunningTab" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FO-5f-X3Y">
-                                        <rect key="frame" x="200" y="508" width="46" height="30"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="vCR-Bt-MBl" kind="show" id="IAF-m6-Xvj"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -604,7 +611,15 @@
                             <constraint firstItem="kTv-AY-WrX" firstAttribute="bottom" secondItem="kPd-ys-mDk" secondAttribute="top" id="Kex-EF-FMG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="笑脸" id="kIr-4C-sqY"/>
+                    <navigationItem key="navigationItem" title="笑脸" id="kIr-4C-sqY">
+                        <barButtonItem key="rightBarButtonItem" title="history" id="orP-Dq-KXs">
+                            <connections>
+                                <segue destination="vCR-Bt-MBl" kind="popoverPresentation" identifier="showHistory" popoverAnchorBarButtonItem="orP-Dq-KXs" id="Ib6-bg-ACY">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="faceView" destination="kTv-AY-WrX" id="Z30-8A-DqR"/>
                     </connections>

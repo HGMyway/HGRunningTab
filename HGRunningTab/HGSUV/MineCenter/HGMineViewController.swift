@@ -43,7 +43,7 @@ extension HGMineViewController: UITableViewDataSource{
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("headCell") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("headCell")!
         
         return cell
     }

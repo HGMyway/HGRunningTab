@@ -9,8 +9,8 @@
 import UIKit
 
 
-@objc
-protocol HGSidePanelViewControllerDelegate {
+//@objc
+protocol HGSidePanelViewControllerDelegate : class{
     
     func panelCellClick(selectedModel : HGSideCellModel)
     

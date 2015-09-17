@@ -29,6 +29,8 @@
 		11B24B4F1B7AF2580055EB9A /* HGRunningTabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B4E1B7AF2580055EB9A /* HGRunningTabTests.swift */; };
 		11B24B701B7AF6D00055EB9A /* HGBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B651B7AF6D00055EB9A /* HGBaseNavigationController.swift */; };
 		11B24B721B7AF6D00055EB9A /* HGBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B6B1B7AF6D00055EB9A /* HGBaseViewController.swift */; };
+		11C740AD1BA9844200001A57 /* HGHistoryFaceTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C740AC1BA9844200001A57 /* HGHistoryFaceTimeViewController.swift */; };
+		11C740AF1BA9868F00001A57 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C740AE1BA9868F00001A57 /* TextViewController.swift */; };
 		11DED09F1B831C6100366913 /* HGMotionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DED09E1B831C6100366913 /* HGMotionKit.swift */; };
 		11DED0A11B83361100366913 /* HGSettingSportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DED0A01B83361100366913 /* HGSettingSportViewController.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,8 @@
 		11B24B4E1B7AF2580055EB9A /* HGRunningTabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRunningTabTests.swift; sourceTree = "<group>"; };
 		11B24B651B7AF6D00055EB9A /* HGBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGBaseNavigationController.swift; sourceTree = "<group>"; };
 		11B24B6B1B7AF6D00055EB9A /* HGBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGBaseViewController.swift; sourceTree = "<group>"; };
+		11C740AC1BA9844200001A57 /* HGHistoryFaceTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGHistoryFaceTimeViewController.swift; sourceTree = "<group>"; };
+		11C740AE1BA9868F00001A57 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		11DED09E1B831C6100366913 /* HGMotionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGMotionKit.swift; sourceTree = "<group>"; };
 		11DED0A01B83361100366913 /* HGSettingSportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSettingSportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +121,8 @@
 			children = (
 				116BCB861BA2627400753CA5 /* HGFaceTimeViewController.swift */,
 				116BCB881BA2656500753CA5 /* HGFaceView.swift */,
+				11C740AC1BA9844200001A57 /* HGHistoryFaceTimeViewController.swift */,
+				11C740AE1BA9868F00001A57 /* TextViewController.swift */,
 			);
 			path = FaceTime;
 			sourceTree = "<group>";
@@ -406,7 +412,9 @@
 		11B24B291B7AF2580055EB9A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = ismyway;
 				TargetAttributes = {
 					11B24B301B7AF2580055EB9A = {
@@ -488,6 +496,8 @@
 				11B24B721B7AF6D00055EB9A /* HGBaseViewController.swift in Sources */,
 				11DED0A11B83361100366913 /* HGSettingSportViewController.swift in Sources */,
 				11AF35461B81D6F10000C16F /* HGSportViewController.swift in Sources */,
+				11C740AD1BA9844200001A57 /* HGHistoryFaceTimeViewController.swift in Sources */,
+				11C740AF1BA9868F00001A57 /* TextViewController.swift in Sources */,
 				11B24B371B7AF2580055EB9A /* AppDelegate.swift in Sources */,
 				1118000B1B8186D700CDA96A /* HGTabBarViewController.swift in Sources */,
 				11DED09F1B831C6100366913 /* HGMotionKit.swift in Sources */,
@@ -554,6 +564,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -624,6 +635,7 @@
 				INFOPLIST_FILE = HGRunningTab/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ht.run;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -639,6 +651,7 @@
 				INFOPLIST_FILE = HGRunningTab/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ht.run;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -659,6 +672,7 @@
 				INFOPLIST_FILE = HGRunningTabTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myway.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HGRunningTab.app/HGRunningTab";
 			};
@@ -675,6 +689,7 @@
 				INFOPLIST_FILE = HGRunningTabTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myway.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HGRunningTab.app/HGRunningTab";
 			};

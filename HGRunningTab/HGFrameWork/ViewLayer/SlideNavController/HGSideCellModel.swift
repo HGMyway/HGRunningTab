@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-@objc
+
 class HGSideCellModel {
 
     let title: String
@@ -26,9 +26,9 @@ class HGSideCellModel {
     class func allCellData() -> Array<HGSideCellModel>{
         
         if let hgTabbar = UIStoryboard.tabbarViewController(){
-            var resultArr = NSMutableArray()
+            let resultArr = NSMutableArray()
             
-            for (index , nav) in  enumerate( hgTabbar.viewControllers as! [UINavigationController] ){
+            for (index , nav) in  (hgTabbar.viewControllers as! [UINavigationController]).enumerate(){
                 
                  var navTitle = nav.title
                 if navTitle == nil {

@@ -39,7 +39,7 @@ public class HGMotionKit{
         }
         dispatch_once(&Static.onceToken) {
             Static.instance = HGMotionKit()
-              println("CMMotionManager 是啥啊")
+              print("CMMotionManager 是啥啊")
         }
         return Static.instance!
     }
@@ -54,11 +54,11 @@ public class HGMotionKit{
     *   given NSOperationQueue will be cancelled. You can access the retrieved values either by a
     *   Trailing Closure or through a Delgate.
     
-    :param: interval 获取加速度时间间隔
-    :param: values   用于回调的block
-    :param: x        屏幕横向的维度，同frame
-    :param: y        屏幕纵向的维度，同frame
-    :param: z        穿过屏幕的维度，
+    - parameter interval: 获取加速度时间间隔
+    - parameter values:   用于回调的block
+    - parameter x:        屏幕横向的维度，同frame
+    - parameter y:        屏幕纵向的维度，同frame
+    - parameter z:        穿过屏幕的维度，
     */
     public func getAccelerometerValues (interval: NSTimeInterval = 0.1, values: ((x: Double, y: Double, z: Double) -> ())? ){
         
@@ -67,20 +67,23 @@ public class HGMotionKit{
         var valZ: Double!
         if hgMotionManager.accelerometerAvailable {
             hgMotionManager.accelerometerUpdateInterval = interval
+            
+
+            
             hgMotionManager.startAccelerometerUpdatesToQueue(NSOperationQueue()) {
-                (data: CMAccelerometerData!, error: NSError!) in
+                (data: CMAccelerometerData?, error: NSError?) in
                 
                 if let isError = error {
                     NSLog("Error: %@", isError)
                 }
-                valX = data.acceleration.x
-                valY = data.acceleration.y
-                valZ = data.acceleration.z
+                valX = data!.acceleration.x
+                valY = data!.acceleration.y
+                valZ = data!.acceleration.z
                 
                 if values != nil{
                     values!(x: valX,y: valY,z: valZ)
                 }
-                var absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
+                let absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
                 self.delegate?.retrieveAccelerometerValues!(valX, y: valY, z: valZ, absoluteValue: absoluteVal)
             }
             
@@ -98,20 +101,20 @@ public class HGMotionKit{
     *   Note that when the updates are stopped, all operations in the
     *   given NSOperationQueue will be cancelled. You can access the retrieved values either by a
     *   Trailing Closure or through a Delegate.
-    :param: interval <#interval description#>
-    :param: values   <#values description#>
-    :param: y        <#y description#>
-    :param: z        <#z description#>
+    - parameter interval: <#interval description#>
+    - parameter values:   <#values description#>
+    - parameter y:        <#y description#>
+    - parameter z:        <#z description#>
     */
     
     
     /**
       陀螺仪，获取手机当前方向
     
-    :param: interval 获取陀螺状态时间间隔
-    :param: values   <#values description#>
-    :param: y        <#y description#>
-    :param: z        <#z description#>
+    - parameter interval: 获取陀螺状态时间间隔
+    - parameter values:   <#values description#>
+    - parameter y:        <#y description#>
+    - parameter z:        <#z description#>
     */
     public func getGyroValues (interval: NSTimeInterval = 0.1, values: ((x: Double, y: Double, z:Double) -> ())? ) {
         var valX: Double!
@@ -120,28 +123,28 @@ public class HGMotionKit{
         if hgMotionManager.gyroAvailable{
             hgMotionManager.gyroUpdateInterval = interval
             hgMotionManager.startGyroUpdatesToQueue(NSOperationQueue()) {
-                (data:CMGyroData!, error:NSError!) in
+                (data:CMGyroData?, error:NSError?) in
                 if let isError = error{
-                    println("陀螺仪错误：\(isError)")
+                    print("陀螺仪错误：\(isError)")
                 }
                 
-                valX = data.rotationRate.x
-                valY = data.rotationRate.y
-                valZ = data.rotationRate.z
+                valX = data!.rotationRate.x
+                valY = data!.rotationRate.y
+                valZ = data!.rotationRate.z
                 
                 if values != nil{
                     values!(x:valX,y:valY,z:valZ)
                 }
-                var absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
+                let absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
                 self.delegate?.retrieveGyroscopeValues!(valX, y: valY, z: valZ, absoluteValue: absoluteVal)
                 
             }
         }else{
-            println("陀螺仪不可用")
+            print("陀螺仪不可用")
         }
     }
     
-    @availability(iOS, introduced=5.0)
+    @available(iOS, introduced=5.0)
     public func getMagnetometerValues (interval: NSTimeInterval = 0.1, values: ((x: Double, y:Double, z:Double) -> ())? ){
         
         var valX: Double!
@@ -155,19 +158,19 @@ public class HGMotionKit{
             
             
             hgMotionManager.startMagnetometerUpdatesToQueue(NSOperationQueue()){
-                (data: CMMagnetometerData!, error: NSError!) in
+                (data: CMMagnetometerData?, error: NSError?) in
                 
                 if let isError = error{
                     NSLog("Error: %@", isError)
                 }
-                valX = data.magneticField.x
-                valY = data.magneticField.y
-                valZ = data.magneticField.z
+                valX = data!.magneticField.x
+                valY = data!.magneticField.y
+                valZ = data!.magneticField.z
                 
                 if values != nil{
                     values!(x: valX, y: valY, z: valZ)
                 }
-                var absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
+                let absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
                 self.delegate?.retrieveMagnetometerValues!(valX, y: valY, z: valZ, absoluteValue: absoluteVal)
             }
             
@@ -202,15 +205,15 @@ public class HGMotionKit{
         if hgMotionManager.deviceMotionAvailable{
             hgMotionManager.deviceMotionUpdateInterval = interval
             hgMotionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue()){
-                (data: CMDeviceMotion!, error: NSError!) in
+                (data: CMDeviceMotion?, error: NSError?) in
                 
                 if let isError = error{
                     NSLog("Error: %@", isError)
                 }
                 if values != nil{
-                    values!(deviceMotion: data)
+                    values!(deviceMotion: data!)
                 }
-                self.delegate?.retrieveDeviceMotionObject!(data)
+                self.delegate?.retrieveDeviceMotionObject!(data!)
             }
             
         } else {
@@ -231,14 +234,14 @@ public class HGMotionKit{
         if hgMotionManager.deviceMotionAvailable{
             hgMotionManager.deviceMotionUpdateInterval = interval
             hgMotionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue()){
-                (data: CMDeviceMotion!, error: NSError!) in
+                (data: CMDeviceMotion?, error: NSError?) in
                 
                 if let isError = error{
                     NSLog("Error: %@", isError)
                 }
-                valX = data.userAcceleration.x
-                valY = data.userAcceleration.y
-                valZ = data.userAcceleration.z
+                valX = data!.userAcceleration.x
+                valY = data!.userAcceleration.y
+                valZ = data!.userAcceleration.z
                 
                 if values != nil{
                     values!(x: valX, y: valY, z: valZ)
@@ -265,20 +268,20 @@ public class HGMotionKit{
         if hgMotionManager.deviceMotionAvailable{
             hgMotionManager.deviceMotionUpdateInterval = interval
             hgMotionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue()){
-                (data: CMDeviceMotion!, error: NSError!) in
+                (data: CMDeviceMotion?, error: NSError?) in
                 
                 if let isError = error{
                     NSLog("Error: %@", isError)
                 }
-                valX = data.gravity.x
-                valY = data.gravity.y
-                valZ = data.gravity.z
+                valX = data!.gravity.x
+                valY = data!.gravity.y
+                valZ = data!.gravity.z
                 
                 if values != nil{
                     values!(x: valX, y: valY, z: valZ)
                 }
-                
-                var absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
+            
+                _ = sqrt(valX * valX + valY * valY + valZ * valZ)
                 self.delegate?.getGravityAccelerationValFromDeviceMotion!(valX, y: valY, z: valZ)
             }
             
@@ -298,16 +301,16 @@ public class HGMotionKit{
         if hgMotionManager.deviceMotionAvailable{
             hgMotionManager.deviceMotionUpdateInterval = interval
             hgMotionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue()){
-                (data: CMDeviceMotion!, error: NSError!) in
+                (data: CMDeviceMotion?, error: NSError?) in
                 
                 if let isError = error{
                     NSLog("Error: %@", isError)
                 }
                 if values != nil{
-                    values!(attitude: data.attitude)
+                    values!(attitude: data!.attitude)
                 }
                 
-                self.delegate?.getAttitudeFromDeviceMotion!(data.attitude)
+                self.delegate?.getAttitudeFromDeviceMotion!(data!.attitude)
             }
             
         } else {
@@ -328,20 +331,21 @@ public class HGMotionKit{
         if hgMotionManager.deviceMotionAvailable{
             hgMotionManager.deviceMotionUpdateInterval = interval
             hgMotionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue()){
-                (data: CMDeviceMotion!, error: NSError!) in
+                (data: CMDeviceMotion?, error: NSError?) in
                 
                 if let isError = error{
                     NSLog("Error: %@", isError)
                 }
-                valX = data.rotationRate.x
-                valY = data.rotationRate.y
-                valZ = data.rotationRate.z
+                valX = data!.rotationRate.x
+                valY = data!.rotationRate.y
+                valZ = data!.rotationRate.z
                 
                 if values != nil{
                     values!(x: valX, y: valY, z: valZ)
                 }
                 
-                var absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
+//                var absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
+                _ = sqrt(valX * valX + valY * valY + valZ * valZ)
                 self.delegate?.getRotationRateFromDeviceMotion!(valX, y: valY, z: valZ)
             }
             
@@ -365,15 +369,15 @@ public class HGMotionKit{
         if hgMotionManager.deviceMotionAvailable{
             hgMotionManager.deviceMotionUpdateInterval = interval
             hgMotionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue()){
-                (data: CMDeviceMotion!, error: NSError!) in
+                (data: CMDeviceMotion?, error: NSError?) in
                 
                 if let isError = error{
                     NSLog("Error: %@", isError)
                 }
-                valX = data.magneticField.field.x
-                valY = data.magneticField.field.y
-                valZ = data.magneticField.field.z
-                valAccuracy = data.magneticField.accuracy.value
+                valX = data!.magneticField.field.x
+                valY = data!.magneticField.field.y
+                valZ = data!.magneticField.field.z
+                valAccuracy = data!.magneticField.accuracy.rawValue
                 
                 
                 if values != nil{
@@ -399,21 +403,21 @@ public class HGMotionKit{
     /*  MARK :- INSTANTANIOUS METHODS START HERE  */
     
     public func getAccelerationAtCurrentInstant (values: (x:Double, y:Double, z:Double) -> ()){
-        self.getAccelerationFromDeviceMotion(interval: 0.5) { (x, y, z) -> () in
+        self.getAccelerationFromDeviceMotion(0.5) { (x, y, z) -> () in
             values(x: x,y: y,z: z)
             self.stopDeviceMotionUpdates()
         }
     }
     
     public func getGravitationalAccelerationAtCurrentInstant (values: (x:Double, y:Double, z:Double) -> ()){
-        self.getGravityAccelerationFromDeviceMotion(interval: 0.5) { (x, y, z) -> () in
+        self.getGravityAccelerationFromDeviceMotion(0.5) { (x, y, z) -> () in
             values(x: x,y: y,z: z)
             self.stopDeviceMotionUpdates()
         }
     }
     
     public func getAttitudeAtCurrentInstant (values: (attitude: CMAttitude) -> ()){
-        self.getAttitudeFromDeviceMotion(interval: 0.5) { (attitude) -> () in
+        self.getAttitudeFromDeviceMotion(0.5) { (attitude) -> () in
             values(attitude: attitude)
             self.stopDeviceMotionUpdates()
         }
@@ -421,14 +425,14 @@ public class HGMotionKit{
     }
     
     public func getMageticFieldAtCurrentInstant (values: (x:Double, y:Double, z:Double) -> ()){
-        self.getMagneticFieldFromDeviceMotion(interval: 0.5) { (x, y, z, accuracy) -> () in
+        self.getMagneticFieldFromDeviceMotion(0.5) { (x, y, z, accuracy) -> () in
             values(x: x,y: y,z: z)
             self.stopDeviceMotionUpdates()
         }
     }
     
     public func getGyroValuesAtCurrentInstant (values: (x:Double, y:Double, z:Double) -> ()){
-        self.getRotationRateFromDeviceMotion(interval: 0.5) { (x, y, z) -> () in
+        self.getRotationRateFromDeviceMotion(0.5) { (x, y, z) -> () in
             values(x: x,y: y,z: z)
             self.stopDeviceMotionUpdates()
         }
@@ -444,7 +448,7 @@ public class HGMotionKit{
     */
     func  stopAccelerometerUpdates(){
         hgMotionManager.stopAccelerometerUpdates()
-        println("停止监听重力加速度")
+        print("停止监听重力加速度")
     }
     
     /**
@@ -452,7 +456,7 @@ public class HGMotionKit{
     */
     public func stopGyroUpdates(){
         hgMotionManager.stopGyroUpdates()
-        println("停止监听陀螺仪")
+        print("停止监听陀螺仪")
     }
     
     
@@ -473,7 +477,7 @@ public class HGMotionKit{
     *  Discussion:
     *   Stops magnetometer updates.
     */
-    @availability(iOS, introduced=5.0)
+    @available(iOS, introduced=5.0)
     public func stopmagnetometerUpdates() {
         hgMotionManager.stopMagnetometerUpdates()
         NSLog("Magnetometer Updates Status - Stopped")

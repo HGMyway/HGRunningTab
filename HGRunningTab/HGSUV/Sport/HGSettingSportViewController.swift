@@ -161,9 +161,9 @@ class HGSettingSportViewController: HGBaseViewController {
 
 
 extension HGSettingSportViewController: CLLocationManagerDelegate{
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-      let   curLocation = locations.last as! CLLocation
+      let   curLocation = locations.last as CLLocation!
         
         acceleLabel.text = curLocation.description
         
@@ -181,13 +181,13 @@ extension HGSettingSportViewController: CLLocationManagerDelegate{
             forceLocation = curLocation
         }
         
-        println("dddd")
+        print("dddd")
         
         
       
     }
     
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         
     }
 }

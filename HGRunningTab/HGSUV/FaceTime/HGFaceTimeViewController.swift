@@ -14,7 +14,6 @@ class HGFaceTimeViewController: HGBaseRootViewController , FaceViewDataDource {
         didSet{
             faceView.dataSource = self
             faceView.addGestureRecognizer(UIPinchGestureRecognizer(target: faceView, action: "scale:"))
-            
         }
     }
     var happiness: Int = 100 {

@@ -106,7 +106,7 @@ extension HGContentViewController: HGTabBarViewControllerDelegata {
     /**
     添加侧边栏视图
     
-    :param: sidePanelController 侧边栏视图控制器
+    - parameter sidePanelController: 侧边栏视图控制器
     */
      func addChildSidePanelController(sidePanelController: HGSidePanelViewController) {
         
@@ -122,9 +122,9 @@ extension HGContentViewController: HGTabBarViewControllerDelegata {
     /**
     显示或隐藏侧边栏
     
-    :param: shouldExpand true 显示侧边栏   false 隐藏侧边栏
+    - parameter shouldExpand: true 显示侧边栏   false 隐藏侧边栏
     */
-    func leftSidePanel(#shouldExpand: Bool) {
+    func leftSidePanel(shouldExpand shouldExpand: Bool) {
         if (shouldExpand){
             currentState = .LeftPanelExpanded
             animateTabbarViewPanelXPosition(targetPosition: CGRectGetWidth(tabbarController.view.frame) - tabbarPanelExpandedOffset)
@@ -144,10 +144,10 @@ extension HGContentViewController: HGTabBarViewControllerDelegata {
     /**
     侧移动画
     
-    :param: targetPosition <#targetPosition description#>
-    :param: completion     <#completion description#>
+    - parameter targetPosition: <#targetPosition description#>
+    - parameter completion:     <#completion description#>
     */
-    func animateTabbarViewPanelXPosition(#targetPosition: CGFloat, completion: ((Bool) -> Void)! = nil) {
+    func animateTabbarViewPanelXPosition(targetPosition targetPosition: CGFloat, completion: ((Bool) -> Void)! = nil) {
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
             self.tabbarController.view.frame.origin.x = targetPosition
         }, completion: completion)

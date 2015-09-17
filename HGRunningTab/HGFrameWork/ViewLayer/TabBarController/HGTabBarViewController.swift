@@ -38,7 +38,7 @@ class HGTabBarViewController: UITabBarController {
 //        tap = UITapGestureRecognizer(target: self, action: "hideSidePanal:")
         
         
-        tapBtn = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        tapBtn = UIButton(type: UIButtonType.Custom)
         tapBtn.frame = view.frame
         tapBtn.backgroundColor = UIColor.clearColor()
         tapBtn.addTarget(self, action: "hideSidePanalClick:", forControlEvents: UIControlEvents.TouchUpInside)
