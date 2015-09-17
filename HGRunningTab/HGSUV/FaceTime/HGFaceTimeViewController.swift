@@ -30,7 +30,7 @@ class HGFaceTimeViewController: HGBaseRootViewController , FaceViewDataDource {
         case  .Ended: fallthrough
         case .Changed:
             let translation = sender.translationInView(faceView)
-            let happinessChange = -Int(translation.y / Constants.HappinessGestureScale)
+            let happinessChange = Int(translation.y / Constants.HappinessGestureScale)
             if happinessChange != 0 {
                 happiness += happinessChange
                 sender.setTranslation(CGPointZero, inView: faceView)
