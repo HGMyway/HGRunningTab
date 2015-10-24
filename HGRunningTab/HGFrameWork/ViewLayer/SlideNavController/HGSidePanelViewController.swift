@@ -62,6 +62,7 @@ class HGSideCell: UITableViewCell {
     func  configureForSidePannalCell(cellModel:HGSideCellModel){
         
         self.textLabel?.text = cellModel.title
+        self.textLabel?.font = UIFont.preferredFontForTextStyle("Imprint MT Shadow")
     }
 
 }

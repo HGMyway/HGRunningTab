@@ -26,7 +26,6 @@
 		11B24B3E1B7AF2580055EB9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B24B3C1B7AF2580055EB9A /* Main.storyboard */; };
 		11B24B401B7AF2580055EB9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B24B3F1B7AF2580055EB9A /* Images.xcassets */; };
 		11B24B431B7AF2580055EB9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B24B411B7AF2580055EB9A /* LaunchScreen.xib */; };
-		11B24B4F1B7AF2580055EB9A /* HGRunningTabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B4E1B7AF2580055EB9A /* HGRunningTabTests.swift */; };
 		11B24B701B7AF6D00055EB9A /* HGBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B651B7AF6D00055EB9A /* HGBaseNavigationController.swift */; };
 		11B24B721B7AF6D00055EB9A /* HGBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B24B6B1B7AF6D00055EB9A /* HGBaseViewController.swift */; };
 		11C740AD1BA9844200001A57 /* HGHistoryFaceTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C740AC1BA9844200001A57 /* HGHistoryFaceTimeViewController.swift */; };
@@ -34,16 +33,6 @@
 		11DED09F1B831C6100366913 /* HGMotionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DED09E1B831C6100366913 /* HGMotionKit.swift */; };
 		11DED0A11B83361100366913 /* HGSettingSportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DED0A01B83361100366913 /* HGSettingSportViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		11B24B491B7AF2580055EB9A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 11B24B291B7AF2580055EB9A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 11B24B301B7AF2580055EB9A;
-			remoteInfo = HGRunningTab;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		110133A71B817A3A00EE81A7 /* HGSidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSidePanelViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +57,6 @@
 		11B24B3D1B7AF2580055EB9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11B24B3F1B7AF2580055EB9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		11B24B421B7AF2580055EB9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		11B24B481B7AF2580055EB9A /* HGRunningTabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HGRunningTabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B24B4D1B7AF2580055EB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11B24B4E1B7AF2580055EB9A /* HGRunningTabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRunningTabTests.swift; sourceTree = "<group>"; };
 		11B24B651B7AF6D00055EB9A /* HGBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGBaseNavigationController.swift; sourceTree = "<group>"; };
@@ -86,13 +74,6 @@
 			files = (
 				115BE63B1B84C876008A6D1A /* CoreLocation.framework in Frameworks */,
 				115E9D1B1B8BE398007F16CA /* HealthKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		11B24B451B7AF2580055EB9A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				11B24B311B7AF2580055EB9A /* HGRunningTab.app */,
-				11B24B481B7AF2580055EB9A /* HGRunningTabTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -388,24 +368,6 @@
 			productReference = 11B24B311B7AF2580055EB9A /* HGRunningTab.app */;
 			productType = "com.apple.product-type.application";
 		};
-		11B24B471B7AF2580055EB9A /* HGRunningTabTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 11B24B551B7AF2580055EB9A /* Build configuration list for PBXNativeTarget "HGRunningTabTests" */;
-			buildPhases = (
-				11B24B441B7AF2580055EB9A /* Sources */,
-				11B24B451B7AF2580055EB9A /* Frameworks */,
-				11B24B461B7AF2580055EB9A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				11B24B4A1B7AF2580055EB9A /* PBXTargetDependency */,
-			);
-			name = HGRunningTabTests;
-			productName = HGRunningTabTests;
-			productReference = 11B24B481B7AF2580055EB9A /* HGRunningTabTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -432,10 +394,6 @@
 							};
 						};
 					};
-					11B24B471B7AF2580055EB9A = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 11B24B301B7AF2580055EB9A;
-					};
 				};
 			};
 			buildConfigurationList = 11B24B2C1B7AF2580055EB9A /* Build configuration list for PBXProject "HGRunningTab" */;
@@ -452,7 +410,6 @@
 			projectRoot = "";
 			targets = (
 				11B24B301B7AF2580055EB9A /* HGRunningTab */,
-				11B24B471B7AF2580055EB9A /* HGRunningTabTests */,
 			);
 		};
 /* End PBXProject section */
@@ -465,13 +422,6 @@
 				11B24B3E1B7AF2580055EB9A /* Main.storyboard in Resources */,
 				11B24B431B7AF2580055EB9A /* LaunchScreen.xib in Resources */,
 				11B24B401B7AF2580055EB9A /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		11B24B461B7AF2580055EB9A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,23 +455,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		11B24B441B7AF2580055EB9A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				11B24B4F1B7AF2580055EB9A /* HGRunningTabTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		11B24B4A1B7AF2580055EB9A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 11B24B301B7AF2580055EB9A /* HGRunningTab */;
-			targetProxy = 11B24B491B7AF2580055EB9A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		11B24B3C1B7AF2580055EB9A /* Main.storyboard */ = {
@@ -657,44 +591,6 @@
 			};
 			name = Release;
 		};
-		11B24B561B7AF2580055EB9A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HGRunningTabTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.myway.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HGRunningTab.app/HGRunningTab";
-			};
-			name = Debug;
-		};
-		11B24B571B7AF2580055EB9A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HGRunningTabTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.myway.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HGRunningTab.app/HGRunningTab";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -712,15 +608,6 @@
 			buildConfigurations = (
 				11B24B531B7AF2580055EB9A /* Debug */,
 				11B24B541B7AF2580055EB9A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		11B24B551B7AF2580055EB9A /* Build configuration list for PBXNativeTarget "HGRunningTabTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				11B24B561B7AF2580055EB9A /* Debug */,
-				11B24B571B7AF2580055EB9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
