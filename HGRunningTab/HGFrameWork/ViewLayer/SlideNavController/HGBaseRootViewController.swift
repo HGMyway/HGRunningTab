@@ -15,7 +15,7 @@ class HGBaseRootViewController: HGBaseViewController {
 
         // Do any additional setup after loading the view.
         
-         //dd
+         //dddd的
         hgTabbarController = tabBarController as! HGTabBarViewController
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "left", style: UIBarButtonItemStyle.Done, target: self, action: "leftSlideBtnClick:")
